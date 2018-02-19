@@ -14,8 +14,8 @@ RUN apk --no-cache --update add \
 
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir \
-    scipy \
-    numpy \
+    scipy==1.0.0 \
+    numpy==1.14.0 \
     nltk==3.2.5 \
     gensim==3.1.0 \
     pandas==0.22.0
