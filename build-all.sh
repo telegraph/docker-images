@@ -2,7 +2,7 @@
 
 echo "Building Docker images"
 for name in * ; do
-    if [[ -d ${name} && ${name} == 'gcloud-agent' ]]; then
+    if [[ -d ${name} ]]; then
         cd ${name}
         echo "  >> Building telegraph/${name}:$(cat version)"
         docker build -t telegraph/${name}:$(cat version) .
